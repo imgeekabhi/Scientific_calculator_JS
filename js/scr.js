@@ -150,23 +150,12 @@ document.getElementById("back").onclick = function () {
 };
 
 //sign-change-btn
-var sign = "-";
-document.getElementById("sign-change").onclick = function () {
-  var final;
-  if (Math.sign(eval(str)) == 1) {
-    final = sign.concat(str);
-    sign = "";
-    console.log("+");
-    document.getElementById("input").value = final;
-    str = document.getElementById("input").value;
-  } else {
-    final = str.slice(1, str.length);
-    sign = "-";
-    console.log("-");
-    document.getElementById("input").value = final;
-    str = document.getElementById("input").value;
-  }
-  str = document.getElementById("input").value;
+
+document.getElementById("signchange").onclick = function () {
+  var b = document.getElementById("input");
+  var n = b.value;
+  n = n * -1;
+  b.value = n;
 };
 
 //ln-btn
@@ -256,8 +245,10 @@ document.getElementById("exp").onclick = function () {
 
 //f-e--btn
 document.getElementById("f-e").onclick = function () {
-  document.getElementById("input").value = Math.exp(1);
-  str += Math.exp(1).toString();
+  var temp = document.getElementById("input").value;
+  let expo = Math.exp(temp);
+  document.getElementById("input").value = expo;
+  str += expo.toString();
 };
 
 //pi-btn
