@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <title>Calculator </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="container contain">
+        <div class="inner-contain">
+            <br><input class="col-xs-4" type="text" size="40" disabled id="input" style="border: none;">
+            <br><br>
+            <div class="row ">
+                <div class="inner-row">
+                    <button type="button" class="btn op-btn bg-body" id="toggle-btn"><b>DEG</b></button>
+                    <button type="button" class="btn op-btn bg-body" id="f-e"><b>F-E</b></button>
+
+                </div>
+
+                <div class="inner-row ">
+                    <!-- disabled=true -->
+                    <button type="button" value="MC" class="btn op-btn bg-body" id="memory-c"><b>MC</b></button>
+                    <button type="button" value="MR" class="btn op-btn bg-body" id="memory-r"><b>MR</b></button>
+                    <button type="button" value="M+" class="btn op-btn bg-body" id="memory-p"><b>M+</b></button>
+                    <button type="button" value="M-" class="btn op-btn bg-body" id="memory-m"><b>M-</b></button>
+                    <button type="button" value="MS" class="btn op-btn bg-body" id="memory-s"><b>MS</b></button>
+                </div>
+
+                <div class="row inner-row">
+                    <!-- trigonometry and funtions sections -->
+                    <div class="col-lg-4 dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Trigonometry <i class='fa fa-angle-down'></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+
+                            <button class="btn op-btn dropdown-item dropdown-btns" id="sin" type="button">sin</button>
+                            <button class="btn op-btn dropdown-item dropdown-btns" id="cos" type="button">cos</button>
+                            <button class="btn op-btn dropdown-item dropdown-btns" id="tan" type="button">tan</button>
+                            <button class="btn op-btn dropdown-item dropdown-btns" id="asin" type="button">asin</button>
+                            <button class="btn op-btn dropdown-item dropdown-btns" id="acos" type="button">acos</button>
+                            <button class="btn op-btn dropdown-item dropdown-btns" id="atan" type="button">atan</button>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-8  dropdown">
+                        <button class="btn btn-secondary dropdown-toggle fun" type="button" id="dropdownMenu2"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Function <i class='fa fa-angle-down'></i>
+                        </button>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button class="btn op-btn dropdown-item dropdown-btns" id="f-rand"
+                                type="button">rand</button>
+                            <button class="btn op-btn dropdown-item dropdown-btns" id="f-round"
+                                type="button">round</button>
+                            <button class="btn op-btn dropdown-item dropdown-btns" id="f-trunc"
+                                type="button">trunc</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <br> -->
+
+                <div class="inner-row">
+                    <button type="button" class="btn op-btn" id="x3">x<sup>3</sup></button>
+                    <button type="button" class="btn op-btn" id="pi">π</button>
+                    <button type="button" class="btn op-btn" id="e">e</button>
+                    <button type="button" class="btn op-btn" id="clear">C</button>
+                    <button type="button" class="btn op-btn" id="back">Back</button>
+                </div>
+                <!-- <br> -->
+                <div class="inner-row">
+                    <button type="button" class="btn op-btn" id="x2">x<sup>2</sup></button>
+                    <button type="button" class="btn op-btn" id="1/x">1/x</button>
+                    <button type="button" class="btn op-btn" id="abs">|x|</button>
+                    <button type="button" class="btn op-btn" id="exp">exp</button>
+                    <button type="button" class="btn op-btn" id="mod">mod</button>
+                </div>
+                <!-- <br> -->
+                <div class="inner-row">
+                    <button type="button" class="btn op-btn" id="sqrt">2√x</button>
+                    <button type="button" class="btn op-btn" id="bracket-open">(</button>
+                    <button type="button" class="btn op-btn" id="bracket-close">)</button>
+                    <button type="button" class="btn op-btn" id="fact">n!</button>
+                    <button type="button" class="btn op-btn" id="divide">/</button>
+                </div>
+                <!-- <br> -->
+
+                <div class="inner-row">
+                    <button type="button" class="btn op-btn" id="x-power-y">x<sup>y</sup></button>
+                    <button type="button" class="btn digits" id="seven"><b>7</b></button>
+                    <button type="button" class="btn digits" id="eight"><b>8</b></button>
+                    <button type="button" class="btn digits" id="nine"><b>9</b></button>
+                    <button type="button" class="btn op-btn" id="multiply">X</button>
+                </div>
+                <!-- <br> -->
+
+                <div class="inner-row">
+                    <button type="button" class="btn op-btn" id="tenpow">10<sup>x</sup></button>
+                    <button type="button" class="btn digits" id="four"><b>4</b></button>
+                    <button type="button" class="btn digits" id="five"><b>5</b></button>
+                    <button type="button" class="btn digits" id="six"><b>6</b></button>
+                    <button type="button" class="btn op-btn" id="minus">-</button>
+                </div>
+                <!-- <br> -->
+                <div class="inner-row">
+                    <button type="button" class="btn op-btn" id="log">log</button>
+                    <button type="button" class="btn digits" id="one"><b>1</b></button>
+                    <button type="button" class="btn digits" id="two"><b>2</b></button>
+                    <button type="button" class="btn digits" id="three"><b>3</b></button>
+                    <button type="button" class="btn op-btn" id="plus">+</button>
+
+                </div>
+
+                <div class="inner-row">
+                    <button type="button" class="btn op-btn" id="ln">ln</button>
+                    <button type="button" class="btn digits" id="signchange">+/-</button>
+                    <button type="button" class="btn digits" id="zero"> <b>0</b></button>
+                    <button type="button" class="btn digits" id="decimal">.</button>
+                    <button type="button" class="btn op-btn" style="max-width: 120px;" id="equals">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/scr.js" type="text/javascript"></script>
+</body>
+
+
+</html>
